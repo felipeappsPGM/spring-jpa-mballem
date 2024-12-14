@@ -1,0 +1,15 @@
+version: '4.36.0'
+services:
+  database:
+    build:
+      context: ./database
+    image: mballem/database:latest
+    ports:
+      - 5432:5432
+    container_name: mballem
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: "bridge"

@@ -1,0 +1,21 @@
+
+spring:
+  application:
+    name: spring-data-jpa
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mballem
+    username: mballem
+    password: mballem
+
+  jpa:
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    defer-datasource-initialization: true
+
+server:
+  port: 8081
+  servlet:
+    context-path: /api
